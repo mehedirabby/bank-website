@@ -15,8 +15,26 @@ document.getElementById('btn-deposite').addEventListener('click',function(){
 
     //step-4: add numbers to set the total deposite
     const currentDepositeTotal = previousDepositeTotal + newDepositeAmount;
+    //set the deposite total
 
     depositeTotalElement.innerText = currentDepositeTotal;
+
+
+
+    //step-5: get balace current total
+    const balanceTotal =document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+
+    //step 6: calculate current total balance
+    const currentBalanceTotal = previousBalanceTotal + newDepositeAmount;
+    //set the balance total
+    balanceTotal.innerText = currentBalanceTotal;
+    if(depusiteField !== 'number'){
+        alert('please give valid data')
+    }
+
 
     //step:7 : clear the deposite field
     depusiteField.value=' ';

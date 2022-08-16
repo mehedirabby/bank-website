@@ -27,7 +27,7 @@
                         Withdraw
                     </h4>
                     <h2 class="text-5xl">
-                        $00
+                        $ <span id="withdraw-total">00</span>
                     </h2>
                 </div>
                 
@@ -36,7 +36,7 @@
                         Balance
                     </h4>
                     <h2 class="text-5xl">
-                        $1200
+                        $ <span id="balance-total">1240</span>
                     </h2>
                 </div>
    
@@ -62,9 +62,9 @@
                        Please  Withdraw
                     </h4>
                    
-                    <input id="user-email" class="w-9/12 block mb-4 px-5" type="email" placeholder="$Amount you want to deposite">
+                    <input id="withdraw-field" class="w-9/12 block mb-4 px-5" type="text" placeholder="$Amount you want to withdraw">
                         
-                    <button id="sub-btn" class="bg-amber-500 hover:bg-lime-800 px-8 py-2 rounded-lg text-white font-medium" >Withdraw</button>
+                    <button id="btn-withdraw" class="bg-amber-500 hover:bg-lime-800 px-8 py-2 rounded-lg text-white font-medium" >Withdraw</button>
                 </div>
                 
                
@@ -73,5 +73,6 @@
         </section>
     </main>
     <script src="js/deposite.js"></script>
+    <script src="js/withdraw.js"></script>
 </body>
 </html>
