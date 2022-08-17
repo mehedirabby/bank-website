@@ -24,25 +24,32 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const previousWithdrawTotalString = withdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-    //step-4:
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
 
-    //step-4.5:
-    withdrawTotalElement.innerText = currentWithdrawTotal;
+    
+   
     //step:5 
     const balanceTotalElement = document.getElementById('balance-total') 
     const previousBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+     //step-7
+     withdrawField.value = ' ';
     //step:6
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = newBalanceTotal;
-    if(withdrawField !== 'number'){
-        alert('please give valid data');
+    if(newWithdrawAmount > previousBalanceTotal){
+        alert('not enough money')
+        return;
     }
+   
+    
+     //step-4:
+     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+
+     //step-4.5:
+     withdrawTotalElement.innerText = currentWithdrawTotal;
 
 
 
-    //step-7
-    withdrawField.value = ' '
+   
 
 })
